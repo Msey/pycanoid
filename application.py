@@ -24,8 +24,8 @@ class Application:
         missile.position(int(missile.x + missile.speedX * dt), int(missile.y + missile.speedY * dt))
         for brick in level:
             if (brick.collides(missile)):
-                level.remove(brick)    
-            elif(player.collides(missile)):
+                level.remove(brick) 
+		if(player.collides(missile)):
                 pass
 
     def main(self):
@@ -60,4 +60,4 @@ class Application:
             Application.update_colliders(level, missile, player, dt)
             Application.update_graphics(level, missile, player, screen)
 
-Application.main();
+Application().main();

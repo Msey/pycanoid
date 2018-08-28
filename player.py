@@ -15,7 +15,7 @@ class Player:
         self.x = x
         self.y = y
         self.collider = [self.x, self.y, 50, 25]
-
+    
     def collides(self, missile):
          import pygame as pg
 
@@ -24,10 +24,6 @@ class Player:
          if (pg.Rect(self.collider).colliderect(missile.collider)):
             flag = True
 
-            if (missile.x < self.collider[0]):
-                missile.speedX = -1
-            elif (missile.x > self.collider[0]):
-                    missile.speedX = 1
             if (missile.y > self.collider[1]):
                 missile.speedY = 1
             elif (missile.y > self.collider[1]):

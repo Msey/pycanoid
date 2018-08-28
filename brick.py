@@ -33,6 +33,6 @@ class Brick:
                     missile.speedX = 1
             if (missile.y > self.collider[1]):
                 missile.speedY = -1
-            elif (missile.y > self.collider[1]):
+            elif (missile.y < self.collider[1]):
                     missile.speedY = 1
          return flag
